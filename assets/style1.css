@@ -1,0 +1,111 @@
+* {
+   box-sizing: border-box;
+}
+
+
+      h2 {
+         text-align: center;
+      }
+    .reg_form {
+      margin-top: 5em;
+      margin-bottom: 5em;
+      margin-left: 32em;
+      background-color: mistyrose;
+      width: 45%;
+      display: grid;
+      row-gap: 20px;
+      max-width: 400px;
+      border: 3px solid #f1f1f1;
+    }
+
+   input[type=text], input[type=password], input[type=date], textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+ 
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+.registerbtn {
+  background-color: white;
+  color: black;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.registerbtn:hover {
+   
+   color: black;
+  opacity: 0.6;
+}
+
+a {
+  color: black;
+}
+
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+
+/* login page  */
+
+    button {
+        background-color: white;
+        color: black;
+        font-size: 1.2em;
+        text-decoration: inherit;
+        padding: 14px 20px;
+        margin: 8px 0;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+    }
+
+
+    button:hover {
+
+         background-color: black; 
+         color: darkred;
+        opacity: 0.6;
+    }
+
+    .cancelbtn {
+        width: auto;
+        padding: 10px 18px;
+        background-color: #f44336;
+    }
+
+   
+    
+
+    span.password {
+        float: right;
+        padding-top: 16px;
+    }
+
+    @media screen and (max-width: 300px) {
+        span.psw {
+            display: block;
+            float: none;
+        }
+        .cancelbtn {
+            width: 100%;
+        }
+    }

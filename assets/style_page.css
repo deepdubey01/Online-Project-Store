@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+a, a:hover, a:focus{
+	text-decoration: none;
+	outline: none;
+}
+
+li{
+	list-style: none;
+	display: inline-block;
+}
+
+.header{
+	background-color: #fff;
+	box-shadow: 0px 5px 10px rgba(91, 91, 91, 0.1);
+}
+
+.fa-lg {
+	margin-right: 5px;
+	font-size: 1.33333333em;
+	line-height: .75em;
+	vertical-align: -15%;
+}
+
+.header_logo{
+	-moz-box-shadow:    inset 0 0 10px #000000;
+	-webkit-box-shadow: inset 0 0 10px #000000;
+	box-shadow:         inset 0 0 10px #000000;
+	padding: 54px;
+	text-align: center;
+	height: 40px;
+}
+
+.header_logo a{
+	display: inline-block;
+	color: #000;
+	font-size: 20px;
+	margin: -37px;
+	text-transform: uppercase;
+	font-weight: 500;
+	letter-spacing: 3px;
+}
+
+.header_logo a span{
+	color: orange;
+	font-size: 40px;
+	font-family: cursive;
+	text-shadow: 5px 3px 7px;
+	font-weight: 700;
+}
+
+.header_menu{
+	padding: 30px 0 27px;
+	text-align: center;
+}
+
+.header_menu ul li{
+	position: relative;
+	display: inline-block;
+	margin-right: 40px;
+}
+
+.header_menu ul li a{
+	color: #000;
+	font-size: 17px;
+	font-weight: 500;
+	display: block;
+	padding: 2px 0;
+	position: relative;
+}
+
+.header_menu ul li a:after{
+	position: absolute;
+	content: '';
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 2px;
+	background-color: #ff7200;
+	transition: all 0.5s;
+	transform: scale(0);
+}
+
+.header_menu ul li:hover a:after{
+	transform: scale(1);
+}
+
+.header_menu ul li.active a:after{
+	transform: scale(1);
+}
+
+.header_menu ul li:last-child{
+	margin-right: 0;
+}
+
+.header_right{
+	text-align: center;
+	padding: 30px 0 27px;
+}
+
+
+.dropdown {
+	position: relative;
+	display: initial;
+}
+
+
+.dropdown-title{
+	display: block;
+	padding: 2px 0;
+	position: relative;
+	color: black;
+	font-weight: 500;
+	font-size: 17px;
+}
+
+.dropdown-content {
+	display: none;
+	text-align: left;
+	position: absolute;
+	background-color: #f9f9f9;
+	min-width: 85px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	z-index: 1;
+}
+
+
+.dropdown-content a {
+	color: black;
+	padding: 6px 12px;
+	text-decoration: none;
+	font-size: medium;
+	display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+	background-color: black;
+	color: white;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+
+	display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+	background-color: #3e8e41;
+}
+
+
+/*Banner Frame*/
+
+.banner-frame {
+	filter: brightness(1.0);
+	min-height: 493px;
+	width: 100%;
+	background-size: cover;
+	border: 2px solid #aabbaa;
+	-moz-box-shadow:    inset 0 0 20px 10px #000000;
+	-webkit-box-shadow: inset 0 0 20px 10px #000000;
+	box-shadow:         inset 0 0 20px 10px whitesmoke;
+}
+
+.slider{
+	overflow: hidden;
+	height: 480px;
+}
+
+.slider figure div{
+	float: left;
+	width: 20%;
+}
+
+.slider figure img{
+	height: 510px;
+	padding-left: 10px;
+	padding-top: 5px;
+	float: left;
+	width: 99%;
+}
+
+.slider figure{
+	position: relative;
+	width: 500%;
+	margin: 0px;
+	left: 0%;
+	animation: 50s deepak infinite;
+}
+
+@keyframes deepak{
+	0%{
+		left: 0%;
+	}
+
+	10%{
+		left: 0%;
+	}
+
+	12%{
+		left: -100%;
+	}
+
+	22%{
+		left: -100%;
+	}
+
+	24%{
+		left: -200%;
+	}
+
+	34%{
+		left: -200%;
+	} 
+
+	36%{
+		left: -300%;
+	}
+	46%{
+		left: -300%;
+	}
+
+	48%{
+		left: -400%;
+	}
+
+	58%{
+		left: -400%;
+	}
+
+	68%{
+		left: -300%;
+	}
+
+	70%{
+		left: -300%;
+	}
+
+	80%{
+		left: -200%;
+	}
+
+	82%{
+		left: -200%;
+	}
+
+	84%{
+		left: -100%;
+	}
+
+	94%{
+		left: -100%;
+	}
+
+	96%{
+		left:0%;
+	}
+}
+
+
+hr{
+style="height: 2px;
+border-width: 0; 
+ color: black; 
+ background-color: black;
+}
+
+
+.product{
+	padding-top: 60px;
+	padding-bottom: 50px; 
+}
+
+.product .section-title{
+	margin-bottom: 45px;
+}
+
+.product .section-title h4{
+	columns: #000;
+	font-weight: 600;
+	text-transform: uppercase;
+	position: relative;
+	display: inline-block;
+}
+
+.product .section-title h4:after{
+	position: absolute;
+	content: '';
+	left: 0;
+	bottom: -4px;
+	height: 2px;
+	width: 70px;
+	background-color: #ca1515;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

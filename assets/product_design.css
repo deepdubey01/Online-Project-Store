@@ -1,0 +1,128 @@
+
+
+.wrapper {
+ background-color: #C808F9;
+ height: 220px;
+ width: 340px;
+ margin-top: 38px;
+ text-align: initial;
+ margin-left: 6em;
+ margin-bottom: 40px;
+ display: -webkit-inline-box;
+ border-radius: 11px 11px 11px 11px;
+  VIA CSS MATIC https://goo.gl/cIbnS 
+ -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+ -moz-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.15);
+ box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.15);
+}
+
+.product-img {
+  float: left;
+
+}
+
+.product-img img {
+  border-radius: 7px 0 0 7px;
+}
+
+.product-info {
+  height: -webkit-fill-available;
+  float: left;
+  width: 190px;
+  display: inline-block;
+  border-radius: 0px 10px 11px 0px;
+  background-color: #ffffff;
+}
+
+.product-text {
+  width: 189px;
+}
+
+.product-text h1 {
+  padding-top: 5px;
+  font-size: 23px;
+  color: #474747;
+}
+
+.product-text h1,
+.product-price-btn p {
+  text-align: center;
+  font-family: 'Bentham', serif;
+}
+
+.product-text h2 {
+  font-size: 13px;
+  text-align: start;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #d2d2d2;
+  letter-spacing: 0.2em;
+}
+
+.product-text p {
+  height: 125px;
+  font-family: 'Playfair Display', serif;
+  color: #8d8d8d;
+  line-height: 1.7em;
+  font-size: 15px;
+  font-weight: lighter;
+  overflow: hidden;
+}
+
+.product-text-brand{
+  margin-bottom: -30px;
+}
+
+.product-text-brand h1{
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.product-text-brand span{
+  font-size: 20px;
+}
+
+
+.product-price-btn {
+}
+
+.product-price-btn p {
+ display: inline-block;
+ position: absolute;
+ /* top: 1px; */
+ height: 54px;
+ font-family: 'Trocchi', serif;
+ margin: -77px -7px 0px 8px;
+ font-size: 20px;
+ font-weight: lighter;
+ color: #474747;
+}
+
+span {
+  display: inline-block;
+  height: 50px;
+  font-family: 'Suranna', serif;
+  font-size: 22px;
+}
+
+
+.product-submit-btn{
+  margin-top: 10px;
+}
+.product-price-btn:hover {
+  background-color: #79b0a1;
+}
+
+
+.product-submit-btn [type=submit]{
+  background-color: bisque;
+  border-radius: 5px;
+}
+
+.product-submit-btn [type=submit]:hover{
+  background-color: black;
+  color: white;
+
+}
+

@@ -1,0 +1,118 @@
+<?php include "header.inc.php"; 
+
+$categoriers_data = mysqli_query($conn,"select * from categories");
+
+$pname='';
+$description='';
+$short_description='';
+$mrp='';
+$price=''; 
+$image = '';
+$image_required = '';
+$qty='';
+$date = date("Y-m-d");
+$msg='';
+if (isset($_GET['pid']) && $_GET['pid']!='') {
+	$id = get_safe_value($conn,$_GET['pid']);
+	$res = mysqli_query($conn,"select * from product where pid='$id'");
+
+	$check = mysqli_num_rows($res);
+	if($check>0){
+		$row = mysqli_fetch_assoc($res);
+		$pname = $row['product_name']; 
+		$mrp = $row['mrp']; 
+		$image=$row['image'];
+
+		$description = $row['description']; 
+		$price = $row['price']; 
+		$short_description = $row['short_description']; 
+		$qty = $row['quantity']; 
+	}else{
+		header('location:product.php');
+		die();
+	}
+}
+
+
+if (isset($_POST['submit'])) 
+{
+	$pname=get_safe_value($conn,$_POST['pname']);
+	$description=get_safe_value($conn,$_POST['description']);
+	$category=get_safe_value($conn,$_POST['category']);
+	$short_description=get_safe_value($conn,$_POST['short_description']);
+	$mrp=get_safe_value($conn,$_POST['mrp']);
+	$image=get_safe_value($conn,$_POST['image']);
+	$price=get_safe_value($conn,$_POST['price']);
+	$qty=get_safe_value($conn,$_POST['qty']);
+
+	$res=mysqli_query($conn,"select * from product where product_name='$pname' and mrp='$mrp'");
+	$check=mysqli_num_rows($res);
+	if($check>0)
+	{
+		if(isset($_GET['pid']) && $_GET['pid']!='') 
+		{
+			$getData=mysqli_fetch_assoc($res); 
+			if($id==$getData['pid']){
+
+			}
+			else
+			{
+				$msg="This product already exist..!!";
+			}
+		}
+		else
+		{
+			$msg="This product already exist..!!";
+		}
+	}
+
+	if ($msg=='') {
+		if(isset($_GET['pid']) && $_GET['pid']!='') {
+			if ($_FILES['image']['name']!='') {
+            $image=rand(111,999).'_'.$_FILES['image']['name'];
+            move_uploaded_file($_FILES['image']['tmp_name'],PRODUCT_IMAGE_SERVER_PATH.$image);
+			,$update_sql = "update product set cid='$category',product_name='$pname',description='$description',short_description='$short_description',quantity='$qty',price='$price',mrp='$mrp',created_date='$date' where pid='$id'";
+			else{
+          $update_sql="update products set categories_id='$categories_id',product_name='$product_name',qty='$qty',weight='$weight',mrp='$mrp',price='$price',description='$description',short_desc='$short_desc' where id='$id'";
+       }
+		}else{
+			mysqli_query($conn,"insert into product(cid,product_name,mrp,price,description,short_description,quantity,created_date,is_active) values('$category','$pname','$mrp','$price','$description','$short_description','$qty','$date',1)");
+		}
+		header('location: product.php');
+		die();
+	}
+
+}  
+
+
+
+
+?>
+
+
+
+
+
+
+<form action="" method="post">
+    <select name="category" id="">
+        <option value="">Select Categories</option>
+        <?php while($row = mysqli_fetch_assoc($categoriers_data)){ ?>
+
+        <option value="<?php echo $row['cid']  ?>">
+            <?php echo $row['cname']  ?>
+        </option>
+
+
+        <?php      	} ?>
+    </select>
+    <input type="text" name="pname" id="" placeholder="Product Name" value="<?php echo $pname ?>">
+    <input type="file" name="image" id="" value="<?php echo $image_required ?>">
+    <input type="text" name="description" id="" placeholder="description" value=" <?php echo $description ?>">
+    <input type="text" name="short_description" id="" placeholder="Short Description"
+        value="<?php echo $short_description ?>">
+    <input type="text" name="mrp" id="" placeholder="mrp" value="<?php echo $mrp ?> ">
+    <input type="text" name="price" id="" placeholder="price" value="<?php echo $price ?>">
+    <input type="text" name="qty" id="" placeholder="qty" value="<?php echo $qty ?>">
+    <input type="submit" name="submit">
+</form>

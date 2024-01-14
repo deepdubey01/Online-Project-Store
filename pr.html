@@ -1,0 +1,101 @@
+<?php include "header.php";
+
+
+
+include "function.php";
+require_once("dbconnect.php");
+$categories_arr = array();
+$categories_result = mysqli_query($conn,"select * from categories where is_active=1");
+// echo mysqli_num_rows($categories_result);
+while ($row =  mysqli_fetch_assoc($categories_result)) {
+        $categories_arr[] = $row;
+}
+
+
+   
+
+$product_id=mysqli_real_escape_string($conn,$_GET['pid']);
+if($product_id>0) { 
+$get_product=get_product($conn,'','',$product_id);
+
+ }else{
+?>
+<script>
+    window.location.href = 'Product.php';
+</script>
+<?php 
+ }
+
+
+
+
+
+
+ ?>
+
+<div class="small-container">
+    <div class="firstproduct-singleproduct">
+        <div class="singleProfuct-1">
+            <div class="col-6-singleproduct-img">
+                <img src="../images/28689382e8bb61c53a56bbed4b5f7d90.jpg" width="100%">
+            </div>
+        </div>
+
+        <div class="product-information-1" style="padding-top:80px; padding-left: 30px;">
+            <!-- <h4>Ho</h4><br> -->
+            <h1>Default Name</h1>
+            <p>Price:&#8377;3100</p>
+
+            <select>
+                <option value="">Select Size</option>
+                <option value="">6</option>
+                <option value="">6.5</option>
+                <option value="">7</option>
+                <option value="">7.5</option>
+            </select>
+            <input type="number" value="1" min="0" max="10" style="width: 40px;">
+            <a href="" class="btn"><button class="addtobtn">Add to cart</button></a>
+            <a href="payment-1.php" class="btn"><button class="addtobtn">Buy Now</button></a>
+            <h3 class="product-del">Product details
+            </h3>
+            <p>Description </p>
+        </div>
+    </div>
+
+</div>
+
+
+<br><br>
+<h1 class="related-pro">Related Products</h1>
+<hr><br>
+<div class="row">
+    <div class="col-4">
+        <a href=""> <img src="../images/earing-1.jpg" alt="">
+        </a>
+        <h4>WeddingRing</h4>
+        <p>&#8377;2150</p>
+    </div>
+    <div class="col-4">
+        <a href=""> <img src="../images/earing-1.jpg" alt="">
+        </a>
+        <h4>WeddingRing</h4>
+        <p>&#8377;2150</p>
+    </div>
+    <div class="col-4">
+        <a href=""> <img src="../images/jewellery.jpg" alt="">
+        </a>
+        <h4>WeddingRing</h4>
+        <p>&#8377;3250</p>
+    </div>
+    <div class="col-4">
+        <a href=""> <img src="../images/jewlwrry-2.jpg" alt="">
+        </a>
+        <h4>WeddingRing</h4>
+        <p>&#8377;2150</p>
+    </div>
+</div>
+
+</div>
+</div>
+
+<?php include "footer.php" ?>

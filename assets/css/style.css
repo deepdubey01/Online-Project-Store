@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css?family=Abel|Aguafina+Script|Artifika|Athiti|Condiment|Dosis|Droid+Serif|Farsan|Gurajada|Josefin+Sans|Lato|Lora|Merriweather|Noto+Serif|Open+Sans+Condensed:300|Playfair+Display|Rasa|Sahitya|Share+Tech|Text+Me+One|Titillium+Web');
+*{
+margin: 0;
+padding: 0;
+text-decoration: none;
+}
+body{
+  font-family: 'Roboto', sans-serif;
+  font-size:16px;
+  color:#a09e9c;
+  background: #fff;
+    text-transform: capitalize;
+    max-width:1920px;
+    margin:0 auto;
+  overflow-x:hidden;
+}
+
+
+  .banner-frame {
+            filter: brightness(0.6);
+            min-height: 600px;
+            width: 100%;
+            background-size: cover;
+            border: 2px solid red;
+            -moz-box-shadow:    inset 0 0 20px 10px #000000;
+            -webkit-box-shadow: inset 0 0 20px 10px #000000;
+            box-shadow:         inset 0 0 20px 10px whitesmoke;
+          }
+
+         .slider{
+           overflow: hidden;
+            height: 500px;
+          }
+
+          .slider figure div{
+            float: left;
+            width: 20%;
+          }
+
+          .slider figure img{
+            height: 510px;
+            padding-left: 10px;
+            padding-top: 5px;
+            float: left;
+            width: 99%;
+          }
+
+          .slider figure{
+            position: relative;
+            width: 500%;
+            margin: 0px;
+            left: 0%;
+            animation: 50s deepak infinite;
+          }
+
+          @keyframes deepak{
+            0%{
+              left: 0%;
+            }
+
+            10%{
+              left: 0%;
+            }
+
+            12%{
+              left: -100%;
+            }
+
+            22%{
+              left: -100%;
+            }
+
+            24%{
+              left: -200%;
+            }
+
+            34%{
+              left: -200%;
+            } 
+
+            36%{
+              left: -300%;
+            }
+            46%{
+              left: -300%;
+            }
+
+            48%{
+              left: -400%;
+            }
+
+            58%{
+              left: -400%;
+            }
+
+            68%{
+              left: -300%;
+            }
+
+            70%{
+              left: -300%;
+            }
+
+            80%{
+              left: -200%;
+            }
+
+            82%{
+              left: -200%;
+            }
+
+            84%{
+              left: -100%;
+            }
+
+            94%{
+              left: -100%;
+            }
+
+            96%{
+              left:0%;
+            }
+          }
+
+/* Position the navbar container inside the image */
+ .container_nav {
+        box-shadow: 5px 10px 8px 3px whitesmoke;
+        border: 2px solid black;
+        border-width: initial;
+        margin-top: -30.9em;
+        background-color: #DFC2F2;
+        position: fixed;
+        display: contents;
+        width: 99.5%;
+}
+
+/* The navbar */
+.topnav{
+  background-position: center;
+  overflow: hidden;
+  box-shadow: 1px 2px 7px navajowhite;
+  background-color: #f1f1f1;
+  backface-visibility: initial;
+  border: 2px solid #10e5aa;
+  height: 100px;
+}
+
+/* Navbar links */
+.topnav a {
+  font-family: cursive;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 25px;
+  margin-top: 0.2em;
+}
+
+
+.topnav a:hover {
+
+  border-radius: 11px 11px 11px 11px;
+  background-size: 50px;
+  background-color: black;
+  color: white; 
+}
+
+
+.topnav .ul li{
+  text-align: right;
+  float: right;
+  color: black;
+  display: inline-block; 
+  padding:10px;
+  font-size:20px; 
+  font-family:raleway;
+}
+
+
+
+
+
+
+
+ .content_1 {
+                background-repeat: no-repeat;
+                background-size: cover;
+                margin-top: 0.4em;
+                margin-bottom: 0.4em;
+                 }
+
+.nav_12 {
+    font-family: cursive;
+    display: initial;
+    font-style: normal;
+    position: relative;
+    color: black;
+    text-rendering: auto;
+    line-height: 1;
+}
+ 
+
+.topnav .logo {
+     background-image: transparent;
+     box-shadow: 2px 10px 10px darkslategrey;
+     margin-left: 1.5em;
+     float: left;
+     padding: 5px;
+     height: 90px;
+     width: 180px;
+     }
+
+  ul li{
+text-align: center;
+    float: right;
+  color: black;
+  font-size: 20px;
+  display: inline-block; 
+  padding:10px;
+  font-size:20px; 
+  font-family:raleway;
+}
+
+ 
+
+         
+
+.header_img .img_2 {
+  border: 3px solid black;
+  background-size: cover;
+ }
+
+
+
+
+
+
+
+
+/*Products Details*/
+
+.product-banner-name{
+  font-size: 60px;
+  text-align: center;
+  margin-top: 20px;
+  font-family: monospace;
+  text-decoration: underline;
+}
+
+
+
